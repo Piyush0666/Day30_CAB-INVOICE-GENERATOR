@@ -29,5 +29,6 @@ public class InvoiceSummary {
     @Override
     public int hashCode() {
         return Objects.hash(numberOfRides, totalFare, avgFare);
+
     }
 }

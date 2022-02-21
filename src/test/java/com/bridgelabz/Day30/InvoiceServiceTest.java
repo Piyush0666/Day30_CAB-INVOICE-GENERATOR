@@ -61,6 +61,7 @@ class InvoiceServiceTest {
         InvoiceSummary invoiceSummary = invoiceService.getInvoice(1);
         InvoiceSummary expectedInvoices = new InvoiceSummary(2, 30);
         assertEquals(expectedInvoices.getInvoiceSummary(), invoiceSummary.getInvoiceSummary());
+
     }
 }
 
