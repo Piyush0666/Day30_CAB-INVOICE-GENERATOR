@@ -1,6 +1,4 @@
 package com.bridgelabz.Day30;
-
-
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,5 +22,4 @@ class InvoiceServiceTest
             double totalFare = invoiceService.CalculateFare(distance, time);
             assertEquals(5.0, totalFare,0);
         }
-
     }

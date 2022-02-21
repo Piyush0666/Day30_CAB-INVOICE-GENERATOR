@@ -9,4 +9,5 @@ public class InvoiceService {
         double totalFare = distance * COST_PER_KM + time * COST_PER_MIN;
         return Math.max(totalFare, MIN_FARE);
     }
+
 }
