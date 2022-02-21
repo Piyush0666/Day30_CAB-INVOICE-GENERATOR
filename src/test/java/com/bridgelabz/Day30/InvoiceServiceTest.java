@@ -1,11 +1,19 @@
 package com.bridgelabz.Day30;
 
 
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class InvoiceServiceTest {
+    InvoiceService invoiceService;
+
+    @Before
+    public void setup() {
+        invoiceService = new InvoiceService();
+    }
+
     @Test
     public void givenDistanceAndTime_ShouldReturnTotalFare() {
         InvoiceService invoiceService = new InvoiceService();
@@ -44,6 +52,14 @@ class InvoiceServiceTest {
         InvoiceService invoiceService = new InvoiceService();
         InvoiceSummary invoiceSummary = invoiceService.calculateFare(rides);
         InvoiceSummary expectedInvoices = new InvoiceSummary(2, 30.0);
+        assertEquals(expectedInvoices.getInvoiceSummary(), invoiceSummary.getInvoiceSummary());
+    }
+
+    @Test
+    public void givenUserId_ShouldReturnInvoiceSummary() {
+
+        InvoiceSummary invoiceSummary = invoiceService.getInvoice(1);
+        InvoiceSummary expectedInvoices = new InvoiceSummary(2, 30);
         assertEquals(expectedInvoices.getInvoiceSummary(), invoiceSummary.getInvoiceSummary());
     }
 }

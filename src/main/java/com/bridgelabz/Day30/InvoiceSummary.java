@@ -17,7 +17,7 @@ public class InvoiceSummary {
     }
 
     // to compare objects we should have hashcode method else they
-    //create a two different instances so creating equals() and hashcode()
+    //create two different instances so creating equals() and hashcode()
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -25,6 +25,7 @@ public class InvoiceSummary {
         InvoiceSummary that = (InvoiceSummary) o;
         return numberOfRides == that.numberOfRides && Double.compare(that.totalFare, totalFare) == 0 && Double.compare(that.avgFare, avgFare) == 0;
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(numberOfRides, totalFare, avgFare);
