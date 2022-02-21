@@ -11,7 +11,6 @@ public class Ride {
     public double getDistance() {
         return distance;
     }
-
     public int getTime() {
         return time;
     }
