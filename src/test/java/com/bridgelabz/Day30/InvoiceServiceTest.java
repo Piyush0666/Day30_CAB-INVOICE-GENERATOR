@@ -24,5 +24,4 @@ class InvoiceServiceTest
             double totalFare = invoiceService.CalculateFare(distance, time);
             assertEquals(5.0, totalFare,0);
         }
-
     }
