@@ -1,5 +1,8 @@
 package com.bridgelabz.Day30;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class InvoiceService {
     private static final double COST_PER_KM = 10;
     private static final double COST_PER_MIN = 1;
@@ -25,5 +28,6 @@ public class InvoiceService {
         }
         return new InvoiceSummary(rides.length, totalFare);
     }
+
 }
 

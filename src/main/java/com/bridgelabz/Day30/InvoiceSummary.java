@@ -25,7 +25,6 @@ public class InvoiceSummary {
         InvoiceSummary that = (InvoiceSummary) o;
         return numberOfRides == that.numberOfRides && Double.compare(that.totalFare, totalFare) == 0 && Double.compare(that.avgFare, avgFare) == 0;
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(numberOfRides, totalFare, avgFare);
